@@ -1,11 +1,11 @@
 # Chaos Recipe bodyArmour
 Show
 SetBorderColor 0 0 0
-SetFontSize 22
-ItemLevel >= 65
+SetFontSize 28
+ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
-SetBackgroundColor 238 51 119
+SetBackgroundColor 187 187 187
 Class "Body Armours"
 ItemLevel <= 74
 Identified False
@@ -14,10 +14,10 @@ Identified False
 Show
 SetBorderColor 48 255 0
 SetFontSize 28
-ItemLevel >= 65
+ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
-SetBackgroundColor 0 153 136
+SetBackgroundColor 187 187 187
 ItemLevel <= 74
 Class "Boots"
 Identified False
@@ -26,22 +26,22 @@ Identified False
 Show
 SetBorderColor 0 59 255
 SetFontSize 28
-ItemLevel >= 65
+ItemLevel >= 60
 Rarity = Rare
 Class "Gloves"
 ItemLevel <= 74
 SetTextColor 0 0 0
-SetBackgroundColor 238 119 51
+SetBackgroundColor 187 187 187
 Identified False
 
 # Chaos Recipe helmet
 Show
 SetBorderColor 255 245 0
 SetFontSize 28
-ItemLevel >= 65
+ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
-SetBackgroundColor 204 51 17
+SetBackgroundColor 187 187 187
 Class "Helmets"
 ItemLevel <= 74
 Identified False
@@ -50,7 +50,7 @@ Identified False
 Show
 SetBorderColor 255 255 255
 SetFontSize 28
-ItemLevel >= 65
+ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
@@ -63,44 +63,38 @@ Identified False
 # Chaos Recipe ring
 Show
 SetBorderColor 255 0 0
-SetFontSize 40
-ItemLevel >= 65
+SetFontSize 28
+ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
-SetBackgroundColor 51 187 238
+SetBackgroundColor 187 187 187
 PlayAlertSound 16 300
-MinimapIcon 0 Red Star
-PlayEffect Red
 Class "Rings"
-ItemLevel <= 80
+ItemLevel <= 74
 Identified False
 
 # Chaos Recipe belt
-Hide
+Show
 SetBorderColor 255 0 0
-SetFontSize 40
-ItemLevel >= 65
+SetFontSize 28
+ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
-SetBackgroundColor 0 119 187
+SetBackgroundColor 187 187 187
 PlayAlertSound 16 300
-MinimapIcon 0 Red Star
-PlayEffect Red
 Class "Belts"
-ItemLevel <= 80
+ItemLevel <= 74
 Identified False
 
 # Chaos Recipe amulet
-Hide
+Show
 SetBorderColor 255 0 0
-SetFontSize 40
-ItemLevel >= 65
+SetFontSize 28
+ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
-SetBackgroundColor 51 187 238
+SetBackgroundColor 187 187 187
 PlayAlertSound 16 300
-MinimapIcon 0 Red Star
-PlayEffect Red
 Class "Amulets"
-ItemLevel <= 80
+ItemLevel <= 74
 Identified False
