@@ -9,19 +9,19 @@ In this example we want to collect 6 sets of the chaos recipe, at the same time.
 This application queries the official POE website for your selected stashtabs, parses the input for unidentified rares that can be used in the chaos recipe and displays the amount you got in the overlay. If your stash contains more than the maximum sets you want to complete at the same time, it hides those items in the "chaos_items_filter.filter" file and combines it with a chosen filter into a new filter file.
 
 ## Extra Setup:
-    1. Download the newest release of this fork.
+1. Download the newest release of [this fork](https://github.com/benOesing/chaos-recipe-overlay/releases/tag/v0.1).
 
-    2. You need to move the included filter file "chaos_items_filter.filter" (Some credits to Pathofmatth) into your POE Filter folder.
+2. You need to move the included filter file "chaos_items_filter.filter" (Some credits to Pathofmatth) into your POE Filter folder.
 
-    3. Fill in the complete Path to your favorite filter. (ex. C:/Users/benOesing/Documents/My Games/Path of Exile/Filterblade.filter)
+3. Fill in the complete Path to your favorite filter. (ex. C:/Users/benOesing/Documents/My Games/Path of Exile/Filterblade.filter)
 
     3.1. The filter you chose in the settings menu will get copied with an _chaos suffix. Use that filter in game. (ex Filterblade_chaos.filter)
     
-    4. Fill in the number of maximum sets you want to search for at the same time. If your stash is limited you dont want to drown in chest pieces.
+4. Fill in the number of maximum sets you want to search for at the same time. If your stash is limited you dont want to drown in chest pieces.
 
-    5. Optional: Change the "chaos_items_filter.filter" file for your preferences.
+5. Optional: Change the "chaos_items_filter.filter" file for your preferences.
 
-    6. Ongoing: Refresh the filter every so often.
+6. Ongoing: Refresh the filter every so often.
 
 ## TODO: 
     Add two handed weapons, shields, Quiver
