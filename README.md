@@ -1,23 +1,38 @@
 # Fork
-This is a fork that tries to automaticly update a prefered loot filter to safe space and time.
+This is a fork that tries to automatically  update a prefered loot filter to safe space and time, while collecting sets for the chaos recipe.
 
-## Extra Steps:
-    Download the newest release instead.
+![image](example.png?raw=true)
 
-    First you need to move the included filter File "chaos_items_filter.filter" (Credits to Pathofmatth) into your POE Filter folder.
-    The filter you chose in the settings menu will get copied with an _chaos suffix. Use that filter in game.
-    Update your filter as often as needed. The overlay update ratio can be changed in the setup.
+In this example we want to collect 6 sets of the chaos recipe, at the same time. Everything is hidden but the boots, the weapons and gloves, we still want to collect.
 
-### Additional Options
-You have to give the full path to your desired main Filter and the chaos_items_filter must be in the same directory.
-You have to chose the maximum number of sets you try to complete at the same time.
-Changing the chaos_items_filter.filter file, translates into the resulting filter.
+## How it works:
+This application queries the official POE website for your selected stashtabs, parses the input for unidentified rares that can be used in the chaos recipe and displays the amount you got in the overlay. If your stash contains more than the maximum sets you want to complete at the same time, it hides those items in the "chaos_items_filter.filter" file and combines it with a chosen filter into a new filter file.
+
+## Extra Setup:
+    1. Download the newest release of this fork.
+
+    2. You need to move the included filter file "chaos_items_filter.filter" (Some credits to Pathofmatth) into your POE Filter folder.
+
+    3. Fill in the complete Path to your favorite filter. (ex. C:/Users/benOesing/Documents/My Games/Path of Exile/Filterblade.filter)
+
+    3.1. The filter you chose in the settings menu will get copied with an _chaos suffix. Use that filter in game. (ex Filterblade_chaos.filter)
+    
+    4. Fill in the number of maximum sets you want to search for at the same time. If your stash is limited you dont want to drown in chest pieces.
+
+    5. Optional: Change the "chaos_items_filter.filter" file for your preferences.
+
+    6. Ongoing: Refresh the filter every so often.
 
 ## TODO: 
     Add two handed weapons, shields, Quiver
     Remove rings and amulets from hidden list
     Check for update to reduce memory
+    Add display for items that are really needed to complete a set.
 
+## Disclaimer:
+This fork was very rushed, due to the new season approaching. In a few hours of testing it worked as intended and i managed to fill nearly exactly the amount of sets I wanted.
+
+<b>You should look over all items not to miss a 6 socket or even a 6L. The chaos recipe filter overrides every existing filter for matching items!<b>
 
 # Chaos recipe overlay
 
