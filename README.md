@@ -40,7 +40,7 @@ This fork was very rushed, due to the new season approaching. In a few hours of 
 
 ## Setup ⚙️
 
-1. Download the latest version of the app (the .exe file) in the ~~[release page](https://github.com/poe-world/chaos-recipe-overlay/releases)~~
+1. Download the latest version of the app (the .exe file) in the ~~[release page](https://github.com/benOesing/chaos-recipe-overlay/releases)~~
 
 2. Launch it 🚀
 
