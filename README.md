@@ -13,15 +13,17 @@ This application queries the official POE website for your selected stashtabs, p
 
 2. You need to move the included filter file "chaos_items_filter.filter" (Some credits to Pathofmatth) into your POE Filter folder.
 
-3. Fill in the complete Path to your favorite filter. (ex. C:/Users/benOesing/Documents/My Games/Path of Exile/Filterblade.filter)
+3. Launch the application. 
 
-    3.1. The filter you chose in the settings menu will get copied with an _chaos suffix. Use that filter in game. (ex Filterblade_chaos.filter)
+4. Fill in the complete Path to your favorite filter. (ex. C:/Users/benOesing/Documents/My Games/Path of Exile/Filterblade.filter)
+
+    4.1. The filter you chose in the settings menu will get copied with an _chaos suffix. Use that filter in game. (ex Filterblade_chaos.filter)
     
-4. Fill in the number of maximum sets you want to search for at the same time. If your stash is limited you dont want to drown in chest pieces.
+5. Fill in the number of maximum sets you want to search for at the same time. If your stash is limited you dont want to drown in chest pieces.
 
-5. Optional: Change the "chaos_items_filter.filter" file for your preferences.
+6. Optional: Change the "chaos_items_filter.filter" file for your preferences.
 
-6. Ongoing: Refresh the filter every so often.
+7. Ongoing: Refresh the filter every so often.
 
 ## TODO: 
     Add two handed weapons, shields, Quiver
