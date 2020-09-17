@@ -23,7 +23,7 @@ const refreshStashTabs = async () => {
       <button
         class="d-flex align-items-center justify-content-left btn btn-${isSelected ? 'success' : 'primary'} btn-block"
         data-id="${stashTab.id}"
-        ${!stashTab.isValid && 'disabled'}
+        ${!stashTab.isValid && 'false'}
       >
         <div class="stash-color" style="background-color: ${stashTab.colorCss}"></div>
         ${stashTab.name}
@@ -110,5 +110,17 @@ OverlaySizeSelectElement.onchange = async ({srcElement: {value}}) => {
   settings.set('overlay.size', value);
   ipcRenderer.send('overlay-size-changed');
 }
+
+const MaxSetsInputElement = document.getElementById('max-sets');
+MaxSetsInputElement.value = settings.get('user.maxSets') || 1;
+MaxSetsInputElement.oninput = async ({srcElement: {value}}) => {
+  settings.set('user.maxSets', value);
+};
+
+const mainFilterInputElement = document.getElementById('main-filter');
+mainFilterInputElement.value = settings.get('user.mainFilter') || '';
+mainFilterInputElement.oninput = async ({srcElement: {value}}) => {
+  settings.set('user.mainFilter', value);
+};
 
 refreshStashTabs();

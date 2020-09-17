@@ -1,10 +1,31 @@
+# Fork
+This is a fork that tries to automaticly update a prefered loot filter to safe space and time.
+
+## Extra Steps:
+    Download the newest release instead.
+
+    First you need to move the included filter File "chaos_items_filter.filter" (Credits to Pathofmatth) into your POE Filter folder.
+    The filter you chose in the settings menu will get copied with an _chaos suffix. Use that filter in game.
+    Update your filter as often as needed. The overlay update ratio can be changed in the setup.
+
+### Additional Options
+You have to give the full path to your desired main Filter and the chaos_items_filter must be in the same directory.
+You have to chose the maximum number of sets you try to complete at the same time.
+Changing the chaos_items_filter.filter file, translates into the resulting filter.
+
+## TODO: 
+    Add two handed weapons, shields, Quiver
+    Remove rings and amulets from hidden list
+    Check for update to reduce memory
+
+
 # Chaos recipe overlay
 
 ![image](https://user-images.githubusercontent.com/4255460/67449569-999e0a80-f5e8-11e9-9f8e-b09063c960e7.png)
 
 ## Setup ⚙️
 
-1. Download the latest version of the app (the .exe file) in the [release page](https://github.com/poe-world/chaos-recipe-overlay/releases);
+1. Download the latest version of the app (the .exe file) in the ~~[release page](https://github.com/poe-world/chaos-recipe-overlay/releases)~~
 
 2. Launch it 🚀
 
@@ -38,7 +59,7 @@ You will find this value in your cookies once you are logged into the [official 
 - Node/NPM
 
 #### NPM tasks
-
+- `npm install` to install the requiret pacakges;
 - `npm run start` to start the app using the sources;
 - `npm run debug` same thing, but will also open the browser debugger for the overlay/settings windows;
 - `npm run dist` to produce the publishable .exe file (must be on Windows).

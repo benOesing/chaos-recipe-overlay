@@ -6,6 +6,7 @@ const settings = require('electron-settings');
 const {fetchStashItems} = require('../services/stash-items');
 const {aggregateChaosRecipe} = require('../services/chaos-recipe');
 const {fetchCurrentLeague} = require('../services/active-leagues');
+const {refreshFilter} = require('../services/update-filter');
 
 const refreshChaosRecipe = async () => {
   const updateIndicator = (indicatorId, {isDanger, isWarning, totalCount}) => {
@@ -39,6 +40,10 @@ const refreshChaosRecipe = async () => {
     updateIndicator('belt', chaosRecipe.belt);
     updateIndicator('ring', chaosRecipe.ring);
     updateIndicator('amulet', chaosRecipe.amulet);
+
+    // Not really the place to do this, but here we have access to everything we need
+    refreshFilter(settings.get('user.maxSets'),chaosRecipe,settings.get('user.mainFilter'));
+
   } catch (error) {
     console.log("Overlay poll error", error);
   }
