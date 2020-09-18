@@ -9,6 +9,7 @@ const {fetchCurrentLeague} = require('../services/active-leagues');
 const {refreshFilter} = require('../services/update-filter');
 
 const refreshChaosRecipe = async () => {
+  console.log("Refresh");
   const updateIndicator = (indicatorId, {isDanger, isWarning, totalCount}) => {
     const slotElement = document.getElementById(indicatorId);
     const valueElement = slotElement.querySelector('span');
@@ -23,13 +24,17 @@ const refreshChaosRecipe = async () => {
     }
 
     valueElement.textContent = totalCount;
+    
   };
+  console.log("   UI-Colors Done");
 
   const {league: leagueSetting, account, sessionId, stashIds} = settings.get('user');
   const league = await fetchCurrentLeague(leagueSetting);
+  console.log("   League-Fetch Done");
 
   try {
     const stashItems = await fetchStashItems(stashIds, {league, account, sessionId});
+    console.log("   Stash-Fetch Done");
     const chaosRecipe = aggregateChaosRecipe(stashItems);
 
     updateIndicator('hand', chaosRecipe.hand);
@@ -40,9 +45,11 @@ const refreshChaosRecipe = async () => {
     updateIndicator('belt', chaosRecipe.belt);
     updateIndicator('ring', chaosRecipe.ring);
     updateIndicator('amulet', chaosRecipe.amulet);
+    console.log("   UI-Values Done");
 
     // Not really the place to do this, but here we have access to everything we need
     refreshFilter(settings.get('user.maxSets'),chaosRecipe,settings.get('user.mainFilter'));
+    console.log("   Filter Done");
 
   } catch (error) {
     console.log("Overlay poll error", error);

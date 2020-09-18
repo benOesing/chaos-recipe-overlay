@@ -54,7 +54,7 @@ ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
-Class "Daggers" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Rune Daggers" "Sceptres" "Thrusting One Hand Swords" "Wands"
+Class "Daggers" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Rune Daggers" "Sceptres" "Thrusting One Hand Swords" "Wands" "Shields" "Claws"
 ItemLevel <= 74
 Width = 1
 Height <= 3

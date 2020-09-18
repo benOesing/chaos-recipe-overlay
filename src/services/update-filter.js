@@ -10,26 +10,23 @@ exports.refreshFilter = async (maxSets, chaosRecipe, mainFilterPath) => {
         }
     });
     const filterData = fs.readFileSync(dirPath + 'chaos_items_filter.filter', 'utf8').split('\n');
-    console.log(filterData[0] + '\n' + filterData[1]);
     for (var i = 0; i < filterData.length; i++) {
         if (filterData[i].toLowerCase().includes("# chaos recipe")) {
             var itemType = filterData[i].split(" ")[3].trim();
             if (hideInFilter.indexOf("" + itemType) > -1) {
-                filterData[i + 1] = "Hide";
-            } else {
-                filterData[i + 1] = "Show";
+                while(filterData[i] && filterData[i].trim() !== ""){ // trim removes whitespace, newlines etc.
+                    filterData.splice(i,1);
+                }
             }
-            i++;
         }
     }
-    fs.writeFileSync(dirPath + 'chaos_items_filter.filter', filterData.join('\n'));
 
     const mainFilterData = fs.readFileSync(mainFilterPath, 'utf8').split('\n');
-    mainFilterData.unshift("## End of chaos recipe lines. Visit github.com/benOesing");
+    mainFilterData.unshift("## End of chaos recipe lines. Visit https://github.com/benOesing/chaos-recipe-overlay");
     for (var i = filterData.length - 1; i >= 0; i--) {
         mainFilterData.unshift(filterData[i]);
     }
-    mainFilterData.unshift("## Start of chaos recipe lines. Visit github.com/benOesing");
+    mainFilterData.unshift("## Start of chaos recipe lines. Visit https://github.com/benOesing/chaos-recipe-overlay");
     var filterName = mainFilterPath.split(".")[0];
     mainFilterPath = filterName + "_chaos.filter";
     fs.writeFileSync(mainFilterPath, mainFilterData.join('\n'));

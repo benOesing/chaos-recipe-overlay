@@ -26,7 +26,7 @@ This application queries the official POE website for your selected stashtabs, p
 7. Ongoing: Refresh the filter every so often.
 
 ## TODO: 
-    Add two handed weapons, shields, Quiver
+    Add two handed weapons and quiver
     Remove rings and amulets from hidden list
     Check for update to reduce memory
     Add display for items that are really needed to complete a set.
@@ -34,7 +34,7 @@ This application queries the official POE website for your selected stashtabs, p
 ## Disclaimer:
 This fork was very rushed, due to the new season approaching. In a few hours of testing it worked as intended and i managed to fill nearly exactly the amount of sets I wanted.
 
-<b>You should look over all items not to miss a 6 socket or even a 6L. The chaos recipe filter overrides every existing filter for matching items!<b>
+<b>You should look over all items not to miss a 6 socket or even a 6L. The chaos recipe filter overrides ~~every existing filter for matching items!~~ only rules for items we want to find!<b>
 
 # Chaos recipe overlay
 
