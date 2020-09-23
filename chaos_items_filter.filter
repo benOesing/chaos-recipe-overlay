@@ -3,11 +3,12 @@ Show
 SetBorderColor 0 0 0
 SetFontSize 28
 ItemLevel >= 60
+LinkedSockets < 6
 Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 Class "Body Armours"
-ItemLevel <= 74
+ItemLevel <= 82 # Regal recipe ranks down to chaos
 Identified False
 
 # Chaos Recipe boot
@@ -18,7 +19,7 @@ ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
-ItemLevel <= 74
+ItemLevel <= 82 # Regal recipe ranks down to chaos
 Class "Boots"
 Identified False
 
@@ -29,7 +30,7 @@ SetFontSize 28
 ItemLevel >= 60
 Rarity = Rare
 Class "Gloves"
-ItemLevel <= 74
+ItemLevel <= 82 # Regal recipe ranks down to chaos
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 Identified False
@@ -43,7 +44,7 @@ Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 Class "Helmets"
-ItemLevel <= 74
+ItemLevel <= 82 # Regal recipe ranks down to chaos
 Identified False
 
 # Chaos Recipe hand
@@ -54,8 +55,8 @@ ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
-Class "Daggers" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Rune Daggers" "Sceptres" "Thrusting One Hand Swords" "Wands" "Shields" "Claws"
-ItemLevel <= 74
+Class "Daggers" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Rune Daggers" "Thrusting One Hand Swords" "Wands"
+ItemLevel <= 82 # Regal recipe ranks down to chaos
 Width = 1
 Height <= 3
 Identified False
@@ -70,11 +71,13 @@ SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 PlayAlertSound 16 300
 Class "Rings"
-ItemLevel <= 74
+PlayEffect Grey
+MinimapIcon 0 Grey UpsideDownHouse
+ItemLevel <= 82 # Regal recipe ranks down to chaos # Regal recipe ranks down to chaos
 Identified False
 
 # Chaos Recipe belt
-Show
+Hide
 SetBorderColor 255 0 0
 SetFontSize 28
 ItemLevel >= 60
@@ -83,11 +86,11 @@ SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 PlayAlertSound 16 300
 Class "Belts"
-ItemLevel <= 74
+ItemLevel <= 82 # Regal recipe ranks down to chaos # Regal recipe ranks down to chaos
 Identified False
 
 # Chaos Recipe amulet
-Show
+Hide
 SetBorderColor 255 0 0
 SetFontSize 28
 ItemLevel >= 60
@@ -96,5 +99,7 @@ SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 PlayAlertSound 16 300
 Class "Amulets"
-ItemLevel <= 74
+PlayEffect Grey
+MinimapIcon 0 Grey UpsideDownHouse
+ItemLevel <= 82 # Regal recipe ranks down to chaos # Regal recipe ranks down to chaos
 Identified False
