@@ -77,7 +77,7 @@ ItemLevel <= 82 # Regal recipe ranks down to chaos # Regal recipe ranks down to 
 Identified False
 
 # Chaos Recipe belt
-Hide
+Show
 SetBorderColor 255 0 0
 SetFontSize 28
 ItemLevel >= 60
@@ -90,7 +90,7 @@ ItemLevel <= 82 # Regal recipe ranks down to chaos # Regal recipe ranks down to 
 Identified False
 
 # Chaos Recipe amulet
-Hide
+Show
 SetBorderColor 255 0 0
 SetFontSize 28
 ItemLevel >= 60
