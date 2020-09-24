@@ -5,10 +5,11 @@ exports.refreshFilter = async (maxSets, chaosRecipe, mainFilterPath) => {
     const hideInFilter = [];
     Object.keys(chaosRecipe).forEach((resultKey) => {
         const result = chaosRecipe[resultKey];
-        if (result.chaosCount >= maxSets) {
+        if (result.totalCount >= maxSets) {
             hideInFilter.push(resultKey);
         }
     });
+
     const filterData = fs.readFileSync(dirPath + 'chaos_items_filter.filter', 'utf8').split('\n');
     for (var i = 0; i < filterData.length; i++) {
         if (filterData[i].toLowerCase().includes("# chaos recipe")) {

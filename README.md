@@ -26,12 +26,10 @@ This application queries the official POE website for your selected stashtabs, p
 7. Ongoing: Refresh the filter every so often.
 
 ## TODO: 
-    Add two handed weapons and quiver
     Remove rings and amulets from hidden list
     Check for update to reduce memory
     Add display for items that are really needed to complete a set.
     Add option to only query public stash, so no SessionID exposed.
-    Add tracking for items above ilevel 75
     Find a way to give precedence to high value items over chaos recipe filter.
 
 ## Disclaimer:
