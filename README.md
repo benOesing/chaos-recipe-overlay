@@ -35,7 +35,9 @@ This application queries the official POE website for your selected stashtabs, p
 ## Disclaimer:
 This fork was very rushed, due to the new season approaching. In a few hours of testing it worked as intended and i managed to fill nearly exactly the amount of sets I wanted.
 
-<b>You should look over all items not to miss a 6 socket or even a 6L. The chaos recipe filter overrides ~~every existing filter for matching items!~~ only rules for items we want to find!<b>
+<b>You should look over all items not to miss a 6 socket or even a 6L. The chaos recipe filter overrides ~~every existing filter for matching items!~~ only rules for items we want to find!</b>
+
+[![Github All Releases](https://img.shields.io/github/downloads/benOesing/chaos-recipe-overlay/total.svg)]()
 
 # Chaos recipe overlay
 
