@@ -10,7 +10,7 @@ const {refreshFilter} = require('../services/update-filter');
 
 const refreshChaosRecipe = async () => {
   console.log("Refresh");
-  const updateIndicator = (indicatorId, {isDanger, isWarning, totalCount}) => {
+  const updateIndicator = (indicatorId, {isDanger, isWarning, chaosCount,regalCount,totalCount}) => {
     const slotElement = document.getElementById(indicatorId);
     const valueElement = slotElement.querySelector('span');
 
@@ -23,7 +23,7 @@ const refreshChaosRecipe = async () => {
       slotElement.classList.add('warning');
     }
 
-    valueElement.textContent = totalCount;
+    valueElement.textContent = chaosCount + "/" + totalCount;
     
   };
   console.log("   UI-Colors Done");

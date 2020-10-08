@@ -8,8 +8,9 @@ Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 Class "Body Armours"
-ItemLevel <= 82 # Regal recipe ranks down to chaos
 Identified False
+SynthesisedItem False
+FracturedItem False
 
 # Chaos Recipe boot
 Show
@@ -19,9 +20,10 @@ ItemLevel >= 60
 Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
-ItemLevel <= 82 # Regal recipe ranks down to chaos
 Class "Boots"
 Identified False
+SynthesisedItem False
+FracturedItem False
 
 # Chaos Recipe glove
 Show
@@ -30,10 +32,11 @@ SetFontSize 28
 ItemLevel >= 60
 Rarity = Rare
 Class "Gloves"
-ItemLevel <= 82 # Regal recipe ranks down to chaos
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 Identified False
+SynthesisedItem False
+FracturedItem False
 
 # Chaos Recipe helmet
 Show
@@ -44,8 +47,9 @@ Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 Class "Helmets"
-ItemLevel <= 82 # Regal recipe ranks down to chaos
 Identified False
+SynthesisedItem False
+FracturedItem False
 
 # Chaos Recipe hand
 Show
@@ -56,10 +60,11 @@ Rarity = Rare
 SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 Class "Daggers" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Rune Daggers" "Thrusting One Hand Swords" "Wands"
-ItemLevel <= 82 # Regal recipe ranks down to chaos
 Width = 1
 Height <= 3
 Identified False
+SynthesisedItem False
+FracturedItem False
 
 # Chaos Recipe ring
 Show
@@ -73,8 +78,9 @@ PlayAlertSound 16 300
 Class "Rings"
 PlayEffect Grey
 MinimapIcon 0 Grey UpsideDownHouse
-ItemLevel <= 82 # Regal recipe ranks down to chaos # Regal recipe ranks down to chaos
 Identified False
+SynthesisedItem False
+FracturedItem False
 
 # Chaos Recipe belt
 Show
@@ -86,8 +92,9 @@ SetTextColor 0 0 0
 SetBackgroundColor 187 187 187
 PlayAlertSound 16 300
 Class "Belts"
-ItemLevel <= 82 # Regal recipe ranks down to chaos # Regal recipe ranks down to chaos
 Identified False
+SynthesisedItem False
+FracturedItem False
 
 # Chaos Recipe amulet
 Show
@@ -101,5 +108,6 @@ PlayAlertSound 16 300
 Class "Amulets"
 PlayEffect Grey
 MinimapIcon 0 Grey UpsideDownHouse
-ItemLevel <= 82 # Regal recipe ranks down to chaos # Regal recipe ranks down to chaos
 Identified False
+SynthesisedItem False
+FracturedItem False
