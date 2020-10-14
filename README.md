@@ -1,5 +1,5 @@
 # Fork
-This is a fork that tries to automatically  update a prefered loot filter to safe space and time, while collecting sets for the chaos recipe.
+This is a fork for the game Path of Exile. The program tries to automatically update a prefered loot filter to safe space and time, while collecting sets for the chaos recipe.
 
 ![image](example.png?raw=true)
 
@@ -9,9 +9,9 @@ In this example we want to collect 6 sets of the chaos recipe, at the same time.
 This application queries the official POE website for your selected stashtabs, parses the input for unidentified rares that can be used in the chaos recipe and displays the amount you got in the overlay. If your stash contains more than the maximum sets you want to complete at the same time, it hides those items in the "chaos_items_filter.filter" file and combines it with a chosen filter into a new filter file.
 
 ## Extra Setup:
-1. Download the newest release of [this fork](https://github.com/benOesing/chaos-recipe-overlay/releases/tag/v0.1).
+1. Download the newest release of [this fork](https://github.com/benOesing/chaos-recipe-overlay/releases).
 
-2. You need to move the included filter file "chaos_items_filter.filter" (Some credits to Pathofmatth) into your POE Filter folder.
+2. You need to move the included filter file "chaos_items_filter.filter" into your POE Filter folder.
 
 3. Launch the application. 
 
@@ -36,11 +36,11 @@ This application queries the official POE website for your selected stashtabs, p
 ## Disclaimer:
 This fork was very rushed, due to the new season approaching. In a few hours of testing it worked as intended and i managed to fill nearly exactly the amount of sets I wanted.
 
-<b>You should look over all items not to miss a 6 socket or even a 6L. The chaos recipe filter overrides ~~every existing filter for matching items!~~ only rules for items we want to find!</b>
+<b>You should look over all items not to miss a valueable item. The chaos recipe filter overrides ~~every existing filter for matching items!~~ only rules for items we want to find!</b>
 
 [![Github All Releases](https://img.shields.io/github/downloads/benOesing/chaos-recipe-overlay/total.svg)]()
 
-# Chaos recipe overlay
+# Original Project: Chaos recipe overlay
 
 ![image](https://user-images.githubusercontent.com/4255460/67449569-999e0a80-f5e8-11e9-9f8e-b09063c960e7.png)
 
