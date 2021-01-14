@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <title>PoeWorld | Chaos recipe | Settings</title>
+  <title>Chaos recipe | Settings</title>
 
-  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
   <style type="text/css">
     body {
@@ -20,56 +21,66 @@
       border: 2px solid #161616;
       border-radius: 3px;
     }
+
+    label {
+      opacity: 1;
+      font-weight: bold;
+    }
   </style>
 </head>
-<body>
-<div class="p-2">
-  <div class="form-group">
-    <label for="league-select">League</label>
-    <select id="league-select" class="form-control"></select>
-  </div>
 
-  <div class="form-group">
-    <label for="account-input">Account name</label>
-    <input type="text" id="account-input" class="form-control"/>
-  </div>
+ <body>
+  <div class="container">
+    <div class="col-sm-8 w-50 float-left">
+      <div class="form-group">
+        <label for="league-select">League</label>
+        <select id="league-select" class="form-control"></select>
+      </div>
 
-  <div class="form-group">
-    <label for="session-id-input">Session ID (POESESSID)</label>
-    <input type="text" id="session-id-input" class="form-control"/>
-  </div>
+      <div class="form-group">
+        <label for="account-input">Account name</label>
+        <input type="text" id="account-input" class="form-control" />
+      </div>
 
-  <div class="form-group">
-    <label for="refresh-time-input">Interval between each refresh (seconds)</label>
-    <input type="number" id="refresh-time-input" class="form-control"/>
-  </div>
+      <div class="form-group">
+        <label for="session-id-input">Session ID (POESESSID)</label>
+        <input type="password" id="session-id-input" class="form-control" />
+      </div>
 
-  <div class="form-group">
-    <label for="main-filter">Main Filter (Full Path)</label>
-    <input type="text" id="main-filter" class="form-control"/>
-  </div>
+      <div class="form-group">
+        <label for="refresh-time-input">Interval between each refresh (seconds)</label>
+        <input type="number" id="refresh-time-input" class="form-control" />
+      </div>
 
-  <div class="form-group">
-    <label for="max-sets">Maximum Sets</label>
-    <input type="number" id="max-sets" class="form-control"/>
-  </div>
+      <div class="form-group">
+        <label for="main-filter">Main Filter</label>
+        <input type="file" id="main-filter-fileInput" style="display:none;">
+        <input type="text" id="main-filter" onclick="document.getElementById('main-filter-fileInput').click();"
+          class="form-control" />
+      </div>
 
-  <div class="form-group">
-    <label for="overlay-size-select">Overlay size</label>
-    <select id="overlay-size-select" class="form-control">
-      <option value="large">Large</option>
-      <option value="medium">Medium</option>
-      <option value="small">Small</option>
-    </select>
-  </div>
-
-  <div id="tabs" class="form-group mb-0">
-    <label>Stash tabs to scan</label>
-  </div>
-</div>
+      <div class="form-group">
+        <label for="max-sets">Maximum Sets</label>
+        <input type="number" id="max-sets" class="form-control" />
+      </div>
+    </div>
+    <div class="col-sm-8 w-50 float-right">
+      <div class="form-group">
+        <label for="overlay-size-select" style="font-weight: bold;">Overlay size</label>
+        <select id="overlay-size-select" class="form-control">
+          <option value="large" style="font-weight: bold;">Large</option>
+          <option value="medium" style="font-weight: bold;">Medium</option>
+          <option value="small" style="font-weight: bold;">Small</option>
+        </select>
+      </div>
+      <div id="tabs" class="form-group mb-0" style="overflow-y: auto;height:300px">
+        <label>Stash tabs to scan</label>
+      </div>
+    </div>
 </body>
 
 <script>
   require('./settings.js')
 </script>
+
 </html>
