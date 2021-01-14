@@ -107,6 +107,10 @@ ipcMain.on('overlay-size-changed', () => {
   overlayWindow.setBounds({ width, height });
 });
 
+ipcMain.on('overlay-lock-changed', () => {
+  overlayWindow.setMovable(!settings.get('overlay.lock'));
+})
+
 ipcMain.on('open-options', () => {
   if (!settingsWindow) {
     createSettingsWindow();

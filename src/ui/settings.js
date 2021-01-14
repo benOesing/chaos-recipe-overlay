@@ -126,6 +126,13 @@ mainFilterInputElementFileInput.oninput = async => {
   mainFilterInputElement.value = shortenURL(value);
 }
 
+const overlayLockElement = document.getElementById('overlay-lock');
+overlayLockElement.checked = settings.get('overlay.lock') || false;
+overlayLockElement.onclick = async => {
+  settings.set('overlay.lock', overlayLockElement.checked);
+  ipcRenderer.send('overlay-lock-changed');
+}
+
 function shortenURL(url) {
   const parts = url.split("\\");
   return parts[parts.length - 1];
