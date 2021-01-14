@@ -34,7 +34,7 @@ right league is trivially easy.
 This application queries the official POE website for your selected stashtabs, parses the input for unidentified rares that can be used in the chaos recipe and displays the amount you got in the overlay. If your stash contains more than the maximum sets you want to complete at the same time, it hides those items in the "chaos_items_filter.filter" file and combines it with a chosen filter into a new filter file.
 
 ## Setup
-1. Download the newest release of [this fork](https://github.com/benOesing/chaos-recipe-overlay/releases). This would be the .zip file. Extract it anywhere you like.
+1. Download the newest release of [this fork](https://github.com/benOesing/chaos-recipe-overlay/releases). This would be the .rar file. Extract it anywhere you like.
 
 2. You need to move the included filter file "chaos_items_filter.filter" into your POE Filter folder.
 
