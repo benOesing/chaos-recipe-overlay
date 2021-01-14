@@ -54,7 +54,6 @@ function createOverlayWindow() {
 
   overlayWindow = new BrowserWindow(windowOptions);
   overlayWindow.setAlwaysOnTop(true, 'screen-saver');
-  overlayWindow.setIcon('build/icon.ico');
 
 
   overlayWindow.loadFile('./src/ui/overlay.html');
@@ -80,7 +79,6 @@ function createSettingsWindow() {
     }
   });
 
-  settingsWindow.setIcon('build/icon.ico');
   settingsWindow.setAlwaysOnTop(true, 'screen-saver');
 
   settingsWindow.loadFile('./src/ui/settings.html');
@@ -88,7 +86,7 @@ function createSettingsWindow() {
   settingsWindow.setMenu(null);
 
   settingsWindow.on('closed', () => {
-    if (overlayWindow != null) {
+    if(overlayWindow != null){
       overlayWindow.send('forceChaosRecipeRefresh');
     }
     settingsWindow = null;
