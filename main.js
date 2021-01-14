@@ -1,9 +1,9 @@
 // Vendor
-const {app, BrowserWindow, ipcMain} = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const settings = require('electron-settings');
 
 // Constants
-const DEVTOOL_OPTIONS = {mode: 'detach'};
+const DEVTOOL_OPTIONS = { mode: 'detach' };
 
 const OVERLAY_SIZE = {
   large: {
@@ -32,13 +32,17 @@ function createOverlayWindow() {
     frame: false,
     transparent: true,
     resizable: false,
+    movable: false,
+    minimizable: false,
+    maximizable: false,
+    focusable: false,
     webPreferences: {
       nodeIntegration: true
     },
   };
 
   if (settings.has('overlay.size')) {
-    const {height, width} = OVERLAY_SIZE[settings.get('overlay.size')];
+    const { height, width } = OVERLAY_SIZE[settings.get('overlay.size')];
     windowOptions.height = height;
     windowOptions.width = width;
   }
@@ -49,6 +53,9 @@ function createOverlayWindow() {
   }
 
   overlayWindow = new BrowserWindow(windowOptions);
+  overlayWindow.setAlwaysOnTop(true, 'screen-saver');
+  overlayWindow.setIcon('build/icon.ico');
+
 
   overlayWindow.loadFile('./src/ui/overlay.html');
 
@@ -58,7 +65,7 @@ function createOverlayWindow() {
 
   overlayWindow.on('move', () => {
     const [x, y] = overlayWindow.getPosition();
-    settings.set('position', {x, y});
+    settings.set('position', { x, y });
   });
 
   if (debug) overlayWindow.webContents.openDevTools(DEVTOOL_OPTIONS);
@@ -66,23 +73,24 @@ function createOverlayWindow() {
 
 function createSettingsWindow() {
   settingsWindow = new BrowserWindow({
-    width: 400,
+    width: 800,
     height: 600,
-    x: settings.get('position.x'),
-    y: settings.get('position.y'),
-    modal: true,
-    alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: true
     }
   });
+
+  settingsWindow.setIcon('build/icon.ico');
+  settingsWindow.setAlwaysOnTop(true, 'screen-saver');
 
   settingsWindow.loadFile('./src/ui/settings.html');
 
   settingsWindow.setMenu(null);
 
   settingsWindow.on('closed', () => {
-    overlayWindow.send('forceChaosRecipeRefresh')
+    if (overlayWindow != null) {
+      overlayWindow.send('forceChaosRecipeRefresh');
+    }
     settingsWindow = null;
   });
 
@@ -97,8 +105,8 @@ app.on('ready', () => {
 app.on('window-all-closed', () => app.quit());
 
 ipcMain.on('overlay-size-changed', () => {
-  const {height, width} = OVERLAY_SIZE[settings.get('overlay.size')];
-  overlayWindow.setBounds({width, height});
+  const { height, width } = OVERLAY_SIZE[settings.get('overlay.size')];
+  overlayWindow.setBounds({ width, height });
 });
 
 ipcMain.on('open-options', () => {
