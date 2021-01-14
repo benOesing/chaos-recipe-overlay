@@ -1,7 +1,7 @@
 var fs = require('fs')
 
 exports.refreshFilter = async (maxSets, chaosRecipe, mainFilterPath) => {
-    const dirPath = mainFilterPath.substring(0,mainFilterPath.lastIndexOf("\/")+1);
+    const dirPath = mainFilterPath.substring(0, mainFilterPath.lastIndexOf("\/") + 1);
     const hideInFilter = [];
     Object.keys(chaosRecipe).forEach((resultKey) => {
         const result = chaosRecipe[resultKey];
@@ -15,8 +15,8 @@ exports.refreshFilter = async (maxSets, chaosRecipe, mainFilterPath) => {
         if (filterData[i].toLowerCase().includes("# chaos recipe")) {
             var itemType = filterData[i].split(" ")[3].trim();
             if (hideInFilter.indexOf("" + itemType) > -1) {
-                while(filterData[i] && filterData[i].trim() !== ""){ // trim removes whitespace, newlines etc.
-                    filterData.splice(i,1);
+                while (filterData[i] && filterData[i].trim() !== "") { // trim removes whitespace, newlines etc.
+                    filterData.splice(i, 1);
                 }
             }
         }

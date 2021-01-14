@@ -52,7 +52,7 @@ exports.aggregateChaosRecipe = (stashItems) => {
   });
 
   const globalTotalCount = Math.min(
-    ...Object.values(results).map(({totalCount}) => totalCount)
+    ...Object.values(results).map(({ totalCount }) => totalCount)
   );
 
   Object.keys(results).forEach((resultKey) => {

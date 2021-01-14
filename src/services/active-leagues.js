@@ -12,7 +12,7 @@ exports.fetchActiveLeagues = async () => {
 
   const leagues = JSON.parse(rawResponse);
 
-  return leagues.map(({id}) => id);
+  return leagues.map(({ id }) => id);
 };
 
 exports.fetchCurrentLeague = async (leagueSetting) => {

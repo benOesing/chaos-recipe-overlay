@@ -86,7 +86,7 @@ function createSettingsWindow() {
   settingsWindow.setMenu(null);
 
   settingsWindow.on('closed', () => {
-    if(overlayWindow != null){
+    if (overlayWindow != null) {
       overlayWindow.send('forceChaosRecipeRefresh');
     }
     settingsWindow = null;

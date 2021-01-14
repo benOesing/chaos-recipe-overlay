@@ -1,16 +1,16 @@
 // Vendor
-const {ipcRenderer} = require('electron');
+const { ipcRenderer } = require('electron');
 const settings = require('electron-settings');
 
 // Services
-const {fetchStashItems} = require('../services/stash-items');
-const {aggregateChaosRecipe} = require('../services/chaos-recipe');
-const {fetchCurrentLeague} = require('../services/active-leagues');
-const {refreshFilter} = require('../services/update-filter');
+const { fetchStashItems } = require('../services/stash-items');
+const { aggregateChaosRecipe } = require('../services/chaos-recipe');
+const { fetchCurrentLeague } = require('../services/active-leagues');
+const { refreshFilter } = require('../services/update-filter');
 
 const refreshChaosRecipe = async () => {
   console.log("Refresh");
-  const updateIndicator = (indicatorId, {isDanger, isWarning, chaosCount,regalCount,totalCount}) => {
+  const updateIndicator = (indicatorId, { isDanger, isWarning, chaosCount, regalCount, totalCount }) => {
     const slotElement = document.getElementById(indicatorId);
     const valueElement = slotElement.querySelector('span');
 
@@ -24,16 +24,16 @@ const refreshChaosRecipe = async () => {
     }
 
     valueElement.textContent = chaosCount + "/" + totalCount;
-    
+
   };
   console.log("   UI-Colors Done");
 
-  const {league: leagueSetting, account, sessionId, stashIds} = settings.get('user');
+  const { league: leagueSetting, account, sessionId, stashIds } = settings.get('user');
   const league = await fetchCurrentLeague(leagueSetting);
   console.log("   League-Fetch Done");
 
   try {
-    const stashItems = await fetchStashItems(stashIds, {league, account, sessionId});
+    const stashItems = await fetchStashItems(stashIds, { league, account, sessionId });
     console.log("   Stash-Fetch Done");
     const chaosRecipe = aggregateChaosRecipe(stashItems);
 
@@ -48,7 +48,7 @@ const refreshChaosRecipe = async () => {
     console.log("   UI-Values Done");
 
     // Not really the place to do this, but here we have access to everything we need
-    refreshFilter(settings.get('user.maxSets'),chaosRecipe,settings.get('user.mainFilter'));
+    refreshFilter(settings.get('user.maxSets'), chaosRecipe, settings.get('user.mainFilter'));
     console.log("   Filter Done");
 
   } catch (error) {

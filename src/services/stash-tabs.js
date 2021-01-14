@@ -5,7 +5,7 @@ const requestPromise = require('request-promise');
 const BASE_URL = 'https://www.pathofexile.com/character-window/get-stash-items';
 const VALID_TYPES = ['PremiumStash', 'QuadStash'];
 
-exports.fetchStashTabs = async ({account, league, sessionId}) => {
+exports.fetchStashTabs = async ({ account, league, sessionId }) => {
   const rawResponse = await requestPromise({
     uri: encodeURI(`${BASE_URL}?accountName=${account}&league=${league}&tabs=1`),
     headers: {
@@ -13,7 +13,7 @@ exports.fetchStashTabs = async ({account, league, sessionId}) => {
     }
   });
 
-  const {tabs} = JSON.parse(rawResponse);
+  const { tabs } = JSON.parse(rawResponse);
 
   return tabs.map(tab => ({
     id: tab.id,
