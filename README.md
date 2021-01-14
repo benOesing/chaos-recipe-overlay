@@ -60,9 +60,6 @@ This application queries the official POE website for your selected stashtabs, p
     Find a way to give precedence to high value items over chaos recipe filter.
     Highlight items that downgrade to chaos recipe.
 
-## Disclaimer
-This fork was very rushed, due to the new season approaching. In a few hours of testing it worked as intended.
-
 ## POESESSID 🔑
 
 > Your account information are required in order to be able to download your stash tabs content. They are only used to communicate with the official pathofexile.com website and they are stored locally on your computed. No third party whatsoever will ever have access to these credentials.
