@@ -1,12 +1,12 @@
 {
   "name": "chaos-recipe-overlay",
-  "version": "1.1.0",
+  "version": "0.3.0",
   "description": "An overlay that keeps track of your Path of Exile chaos recipe status.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "debug": "electron . debug",
-    "dist": "rm -rf dist/ && electron-builder --x64 --windows portable"
+    "dist": "rmdir /S /Q dist && electron-builder --x64 --windows portable"
   },
   "build": {
     "win": {
