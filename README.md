@@ -61,7 +61,7 @@ This application queries the official POE website for your selected stashtabs, p
     Highlight items that downgrade to chaos recipe.
 
 ## Disclaimer
-This fork was very rushed, due to the new season approaching. In a few hours of testing it worked as intended and i managed to fill nearly exactly the amount of sets I wanted.
+This fork was very rushed, due to the new season approaching. In a few hours of testing it worked as intended.
 
 ## POESESSID 🔑
 
