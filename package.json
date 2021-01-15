@@ -23,7 +23,7 @@
     "poe",
     "chaos recipe"
   ],
-  "author": "Pascal Boutin <contact@pboutin.net>",
+  "author": "BenOesing@github && Pascal Boutin <contact@pboutin.net>",
   "license": "MIT",
   "devDependencies": {
     "electron": "^9.1.1",
